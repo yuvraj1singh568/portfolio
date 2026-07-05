@@ -51,7 +51,7 @@ async function submitForm(e) {
 
         const response = await fetch(
 
-            "http://localhost:5000/api/contact",
+            "https://portfolio-2865.onrender.com/api/contact",
 
             {
 
