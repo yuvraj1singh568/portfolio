@@ -1,0 +1,352 @@
+/* ==========================================
+   GLOBAL ANIMATIONS
+========================================== */
+
+@keyframes fadeUp{
+
+0%{
+opacity:0;
+transform:translateY(40px);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+@keyframes fadeDown{
+
+0%{
+opacity:0;
+transform:translateY(-40px);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+@keyframes fadeLeft{
+
+0%{
+opacity:0;
+transform:translateX(-50px);
+}
+
+100%{
+opacity:1;
+transform:translateX(0);
+}
+
+}
+
+@keyframes fadeRight{
+
+0%{
+opacity:0;
+transform:translateX(50px);
+}
+
+100%{
+opacity:1;
+transform:translateX(0);
+}
+
+}
+
+@keyframes zoomIn{
+
+0%{
+opacity:0;
+transform:scale(.8);
+}
+
+100%{
+opacity:1;
+transform:scale(1);
+}
+
+}
+
+/* ==========================================
+   FLOATING
+========================================== */
+
+@keyframes floating{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+/* ==========================================
+   ROTATE
+========================================== */
+
+@keyframes rotate{
+
+100%{
+transform:rotate(360deg);
+}
+
+}
+
+/* ==========================================
+   PULSE
+========================================== */
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.08);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+/* ==========================================
+   BUTTON RIPPLE
+========================================== */
+
+@keyframes ripple{
+
+0%{
+transform:scale(0);
+opacity:.8;
+}
+
+100%{
+transform:scale(12);
+opacity:0;
+}
+
+}
+
+/* ==========================================
+   FADE CLASSES
+========================================== */
+
+.fade-up{
+
+opacity:0;
+transform:translateY(40px);
+
+}
+
+.fade-left{
+
+opacity:0;
+transform:translateX(-50px);
+
+}
+
+.fade-right{
+
+opacity:0;
+transform:translateX(50px);
+
+}
+
+.zoom-in{
+
+opacity:0;
+transform:scale(.8);
+
+}
+
+.show{
+
+opacity:1 !important;
+
+transform:none !important;
+
+transition:all .8s ease;
+
+}
+
+/* ==========================================
+   FLOAT CLASS
+========================================== */
+
+.float{
+
+animation:floating 4s ease-in-out infinite;
+
+}
+
+/* ==========================================
+   HOVER SCALE
+========================================== */
+
+.hover-scale{
+
+transition:.35s;
+
+}
+
+.hover-scale:hover{
+
+transform:scale(1.04);
+
+}
+
+/* ==========================================
+   HOVER LIFT
+========================================== */
+
+.hover-lift{
+
+transition:.35s;
+
+}
+
+.hover-lift:hover{
+
+transform:translateY(-10px);
+
+}
+
+/* ==========================================
+   IMAGE ZOOM
+========================================== */
+
+.image-zoom{
+
+overflow:hidden;
+
+}
+
+.image-zoom img{
+
+transition:.45s;
+
+}
+
+.image-zoom:hover img{
+
+transform:scale(1.08);
+
+}
+
+/* ==========================================
+   BUTTON HOVER
+========================================== */
+
+.btn-primary,
+.btn-secondary{
+
+position:relative;
+overflow:hidden;
+
+}
+
+.btn-primary::after,
+.btn-secondary::after{
+
+content:"";
+
+position:absolute;
+
+width:20px;
+height:20px;
+
+background:rgba(255,255,255,.3);
+
+border-radius:50%;
+
+transform:scale(0);
+
+opacity:0;
+
+pointer-events:none;
+
+}
+
+.btn-primary:active::after,
+.btn-secondary:active::after{
+
+animation:ripple .6s linear;
+
+}
+
+/* ==========================================
+   CARD HOVER
+========================================== */
+
+.project-card,
+.stack-card,
+.profile-card,
+.opensource-card,
+.about-card{
+
+transition:
+
+transform .35s,
+
+box-shadow .35s,
+
+border-color .35s;
+
+}
+
+.project-card:hover,
+.stack-card:hover,
+.profile-card:hover,
+.opensource-card:hover,
+.about-card:hover{
+
+box-shadow:
+
+0 25px 60px rgba(0,0,0,.08);
+
+}
+
+/* ==========================================
+   SCROLL BAR
+========================================== */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#f4f4f4;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#222;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#000;
+
+}
