@@ -6,7 +6,7 @@ const sendEmail = async ({ name, email, subject, message }) => {
   console.log("RESEND_API_KEY =", process.env.RESEND_API_KEY);
 
   const { data, error } = await resend.emails.send({
-    from: "Portfolio <onboarding@resend.dev>",
+    from: "Portfolio <hello@yuvrajdev.xyz>",
     to: process.env.EMAIL_TO,
     subject: `📩 ${subject}`,
     replyTo: email,
